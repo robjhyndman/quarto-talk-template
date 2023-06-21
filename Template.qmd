@@ -1,0 +1,73 @@
+---
+title: My wonderful talk
+author: Rob J Hyndman
+date: last-modified
+date-format: D MMMM YYYY
+pdf-engine: latexmk
+fig-width: 9
+fig-height: 4.5
+format:
+  beamer:
+    theme: monash
+    aspectratio: 169
+    fontsize: 14pt
+    section-titles: true
+    knitr:
+      opts_chunk:
+        dev: "CairoPDF"
+include-in-header: header.tex
+keep-tex: false
+toc: false
+execute:
+  echo: false
+  message: false
+  warning: false
+  cache: true
+---
+
+```{r}
+#| label: setup
+#| cache: false
+source(here::here("setup.R"))
+```
+
+
+## Outline
+
+\vspace*{0.7cm}\tableofcontents
+
+# Section 1
+
+## Slide 1
+
+Blah blah
+
+```{r}
+#| fig-height: 4
+library(fpp3)
+pedestrian |>
+	fill_gaps(Count = 0) |>
+	filter(Sensor == "Southern Cross Station") |>
+	gg_season(Count, period = "week")
+```
+
+## More information
+\fontsize{18}{20}\sf
+
+\href{https://robjhyndman.com/xxx}{\includegraphics[width=0.5cm]{figs/slide}\, robjhyndman.com/xxx}
+
+\href{https://robjhyndman.com}{\faicon{home} robjhyndman.com}
+
+\href{https://twitter.com/robjhyndman}{\faicon{twitter} @robjhyndman}
+
+\href{https://aus.social/@robjhyndman}{\includegraphics[width=0.5cm]{figs/mastodon}\, aus.social/@robjhyndman}
+
+\href{https://github.com/robjhyndman}{\faicon{github}  @robjhyndman}
+
+\href{mailto:rob.hyndman@monash.edu}{\faicon{envelope}  rob.hyndman@monash.edu}
+
+\begin{textblock}{6.2}(0,8.8)\pgfsetfillopacity{0.65}
+\begin{beamercolorbox}[wd=4.7cm]{block body}
+\fontsize{6}{6}\sf\color[RGB]{72,45,34}\href{https://www.flaticon.com/free-icons/presentation}{Presentation icon created by orvipixel - Flaticon}
+\end{beamercolorbox}
+\end{textblock}
