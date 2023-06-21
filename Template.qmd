@@ -18,6 +18,7 @@ format:
 include-in-header: header.tex
 keep-tex: false
 toc: false
+highlight-style: tango
 execute:
   echo: false
   message: false
