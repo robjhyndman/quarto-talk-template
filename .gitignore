@@ -1,0 +1,4 @@
+*.synctex.gz
+*.fdb_latexmk
+*_cache/
+*_files/
