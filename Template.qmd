@@ -50,10 +50,23 @@ pedestrian
 
 ## Slide 2
 
-Blah blah
+Using Cairo::CairoPDF driver
 
 ```{r}
 #| fig-height: 4
+pedestrian |>
+	fill_gaps(Count = 0) |>
+	filter(Sensor == "Southern Cross Station") |>
+	gg_season(Count, period = "week")
+```
+
+## Slide 2
+
+Using ragg::agg_png driver
+
+```{r}
+#| fig-height: 4
+#| dev: "ragg_png"
 pedestrian |>
 	fill_gaps(Count = 0) |>
 	filter(Sensor == "Southern Cross Station") |>

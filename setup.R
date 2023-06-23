@@ -24,3 +24,8 @@ ggplot2::theme_set(
 quartzFonts(
   sans = c("Fira Sans Regular", "Fira Sans Bold", "Fira Sans Italic", "Fira Sans Bold Italic")
 )
+
+# For when I need png
+ragg_png = function(..., res = 192) {
+  ragg::agg_png(..., res = res, units = "in")
+}
