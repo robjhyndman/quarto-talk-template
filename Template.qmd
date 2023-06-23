@@ -40,12 +40,19 @@ source(here::here("setup.R"))
 # Section 1
 
 ## Slide 1
+\fontsize{10}{10}\sf
+
+```{r}
+#| echo: true
+pedestrian
+```
+
+## Slide 2
 
 Blah blah
 
 ```{r}
 #| fig-height: 4
-library(fpp3)
 pedestrian |>
 	fill_gaps(Count = 0) |>
 	filter(Sensor == "Southern Cross Station") |>

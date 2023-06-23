@@ -3,3 +3,9 @@
 
 % Figures
 \graphicspath{{figs/}}
+
+% Redefine shaded environment if it exists (for R plots)
+\ifcsname Shaded\endcsname
+  \definecolor{shadecolor}{RGB}{215,215,215}
+  \renewenvironment{Shaded}{\fontsize{10}{10}\sf\vspace*{0.14cm}\begin{snugshade}}{\end{snugshade}}
+\fi
