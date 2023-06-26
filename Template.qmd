@@ -73,6 +73,13 @@ pedestrian |>
 	gg_season(Count, period = "week")
 ```
 
+## Some maths
+
+$$s \ne \sqrt{\sum_{i=1}^n |y_i - \bar{y}|^3}$$
+
+* $\alpha$, $\bm{\alpha}$, $\sigma$, $\Sigma$, $\bm{\Sigma}$
+* $x, \bm{x}, y, \bm{y}, z, \bm{z}$
+
 ## More information
 \fontsize{18}{20}\sf
 
