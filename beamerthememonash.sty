@@ -78,6 +78,8 @@
 \setlength{\TPVertModule}{1cm}
 \def\placefig#1#2#3#4{\begin{textblock}{.1}(#1,#2)\rlap{\includegraphics[#3]{#4}}\end{textblock}}
 \def\full#1{\vspace*{0.15cm}\centerline{\includegraphics[width=16cm,height=7.9cm,keepaspectratio=true]{#1}}}
+\def\fullwidth#1{\vspace*{0.15cm}\centerline{\includegraphics[width=16cm,height=200cm,keepaspectratio=true]{#1}}}
+\def\fullheight#1{\vspace*{0.15cm}\centerline{\includegraphics[width=200cm,height=7.9cm,keepaspectratio=true]{#1}}}
 
 % Monash title page
 % One can alter the font size by setting eg 'titlefontsize: 20pt' in the YAML header
@@ -98,6 +100,7 @@
    \tableofcontents[currentsection]
    \end{frame}
   }
+
 % Tighter table of contents
 \usepackage{etoolbox}
 \pretocmd{\section}{\addtocontents{toc}{\protect\addvspace{-20\p@}}}{}{}
@@ -105,5 +108,9 @@
 \setbeamerfont{section number projected}{size=\large}
 \setbeamertemplate{section in toc shaded}[default][50]
 
+% Boxed page number
 \setbeamertemplate{footline}{%
 \hfill\textcolor[rgb]{0.7,0.7,0.7}{\fbox{\insertframenumber{}}}}
+
+% Don't use a figure environment for images
+\renewenvironment*{figure}{}{}
